@@ -86,10 +86,10 @@ class Kat(Animal):
   def sleap(self):
     print(self.name,' can sleap')
   def eat(self):
+    super().eat()
     print('It is fish')
   def speak(self):
-    print('Miaau')
-kat1 = Kat('Murka')  
+    print('Miaau') 
     
 class Dog(Animal):
   def __init__(self, name):
@@ -104,7 +104,7 @@ class Dog(Animal):
   def speak(self):
     print(self.name,' gaw-gavv')
 
-class hamster(Animal):
+class Hamster(Animal):
   def __init__(self, name):
     self.name = name
     self.gender = 'None'
@@ -112,11 +112,28 @@ class hamster(Animal):
   def chil(self):
     print(self.name,' can chiling')
   def eat(self):
-    print('It is meat')
+    super().eat()
+    print('It is tomato')
   def speak(self):
-    print(self.name,' gaw-gavv')
+    print(self.name,' hrhrhr')
 
-odj = Animal('')
+kat1 = Kat('Murka')
+dog1 = Dog('Garry')
+hamster1 = Hamster('Chiller')
+
+odj1 = Kat('Murka')
+odj1.eat()
+odj1.sleap()
+odj1.speak()
+odj1 = Dog('Garry')
+odj1.eat()
+odj1.play()
+odj1.speak()
+odj1 = Hamster('Chiller')
+odj1.eat()
+odj1.chil()
+odj1.speak()
+
 # obj = Human('')
 # obj = Animal('')
 # obj.introduce()
